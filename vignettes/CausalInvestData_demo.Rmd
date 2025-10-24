@@ -1,0 +1,26 @@
+---
+title: "CausalInvestData: Applied Causal Inference for Investment Management"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{CausalInvestData Demo}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\usepackage[utf8]{inputenc}
+---
+
+```{r setup, include=FALSE}
+library(CausalInvestData)
+library(MatchIt)
+library(ggplot2)
+```
+
+## Overview
+`CausalInvestData` provides reproducible synthetic datasets for testing causal inference methods in investment management.
+
+## Matching example (fund_performance)
+
+```{r}
+data(fund_performance)
+m.out <- matchit(treatment ~ alpha + beta + market_return, data = fund_performance)
+summary(m.out)
+plot(m.out, type = "jitter")
+```

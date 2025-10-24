@@ -1,0 +1,65 @@
+url: https://edzai.github.io/CausalInvestDataEnhanced
+template:
+  bootstrap: 5
+  bootswatch: flatly
+  bslib:
+    primary: "#4C6EF5"
+    secondary: "#6C757D"
+    font_scale: 1.0
+
+home:
+  title: "CausalInvestDataEnhanced"
+  description: >
+    Simulated datasets and generation utilities for causal inference in investment
+    management and behavioural finance.
+
+navbar:
+  structure:
+    left: [home, reference, articles, news]
+    right: [github]
+  components:
+    home:
+      text: "Home"
+      href: index.html
+    reference:
+      text: "Reference"
+      href: reference/index.html
+    articles:
+      text: "Vignettes"
+      href: articles/index.html
+    news:
+      text: "Changelog"
+      href: news/index.html
+    github:
+      icon: fa-github
+      href: https://github.com/edzai/CausalInvestDataEnhanced
+
+articles:
+  - title: "Guides & Tutorials"
+    contents:
+      - CausalInvestData_demo
+
+reference:
+  - title: "Core Datasets"
+    contents:
+      - fund_performance
+      - client_behavior
+      - macro_shocks
+      - portfolio_allocations
+
+news:
+  one_page: true
+
+footer:
+  structure:
+    left: [copyright]
+    right: [developed_by]
+  components:
+    copyright: "© 2025 Edzai Conilias Zvobwo"
+    developed_by: "Developed and maintained by Acalytica"
+
+pkgdown:
+  include:
+    - README.md
+    - LICENSE
+  exclude: ["pkgdown", "revdep"]
